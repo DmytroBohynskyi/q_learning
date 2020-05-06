@@ -198,7 +198,7 @@ def q_learning_game(queue, open_h5=True):
             if LivesMax != lives['ale.lives']:
                 reward = -1
 
-            # Q[s, a] = Q[s, a] + eta * ( add_ + gma * np.max(Q[_s_, :]) - Q[s, a])
+            Q[s, a] = Q[s, a] + eta * (add_ + gma * np.max(Q[_s_, :]) - Q[s, a])
 
             s = _s_
 
